@@ -1,4 +1,6 @@
+import { Person } from '@mui/icons-material'
 import React, { useState } from 'react'
+import TinderCard from 'react-tinder-card'
 import "./TinderCards.css"
 
 function TinderCards() {
@@ -10,7 +12,15 @@ function TinderCards() {
     ])
   return (
     <div className='TinderCards'>
-      div.tinderCards__cardContainer
+      <div className='tinderCards__cardsContainer'>
+      {people.map((Person)=>(
+        <TinderCard>
+        
+        </TinderCard>
+      ))}
+      
+      </div>
+       
     </div>
   )
 }
