@@ -4,11 +4,14 @@ import "./TinderCards.css"
 function TinderCards() {
 
     const[people , setPeople] =useState([
-        name : "Elon Musk",
+        {data : "Elon Musk"},
+        {data: "Jeff Bezos"}
 
     ])
   return (
-    <div>TinderCards</div>
+    <div className='TinderCards'>
+      div.tinderCards__cardContainer
+    </div>
   )
 }
 
