@@ -6,11 +6,11 @@ function TinderCards() {
 	const [people, setPeople] = useState([
 		{
 			data: "Elon Musk",
-      url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Elon_Musk_Royal_Society_%28crop2%29.jpg/1024px-Elon_Musk_Royal_Society_%28crop2%29.jpg"
+      url: "http://t2.gstatic.com/licensed-image?q=tbn:ANd9GcSStEXQ52SE6txqvnwfAyOZ-dt6fkkBqzcir0RaZkoG54dYK7UByieR90Nb18ON4rdZ6VyDNVuQdk1kXik"
 		},
 		{ 
       data: "Jeff Bezos" ,
-      url: "https://imageio.forbes.com/specials-images/imageserve/5f469ea85cc82fc8d6083f05/Amazon-Founder-and-CEO-Jeff-Bezos/960x0.jpg?format=jpg&width=960"
+      url: "http://t3.gstatic.com/licensed-image?q=tbn:ANd9GcQcKtPg4LQ1A7_j_7_ph7FfTTTjQrnqOdC2EPUHdeqAZ01JOImw19i9gvYHROXo0HahI13E_dZ1ZekfGEE"
 
     },
 	]);
@@ -23,7 +23,7 @@ function TinderCards() {
   };
 
 	return (
-		<div className="TinderCards">
+		<div className="tinderCards">
 			<div className="tinderCards__cardsContainer">
 				{people.map((person) => (
 					<TinderCard
@@ -32,7 +32,12 @@ function TinderCards() {
 						preventSwipe={["up", "down"]}
 						onSwipe={(dir) => swipped(dir, person.data)}
 						onCardLeftScreen={() => outofFrame(person.data)}
-					> </TinderCard>
+					> 
+
+					<div style={{backgroundImage: `url(${person.url})` }} className="card">
+						<h3>{person.data}</h3>
+					</div>
+					</TinderCard>
 				))}
 			</div>
 		</div>

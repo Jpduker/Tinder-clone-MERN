@@ -10,7 +10,7 @@ function App() {
    
 
     <Headers />
-    // <TinderCards />
+    <TinderCards />
     {/* SwipeButtons */}
 
     </div>
