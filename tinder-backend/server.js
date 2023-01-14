@@ -33,5 +33,16 @@ app.post('tinder/card',(req,res) =>{
     })
 });
 
+app.get('tinder/cards',(err,data) =>{
+    const dbCard =req.body
+ 
+    Cards.find((err,data)=>{
+        if(err){
+            res.status(500).send(err)
+        }else{
+            res.status(200).send(data)
+        }
+    })
+})
 //Listner
 app.listen(port,()=> console.log(`listening on ${port}`))
