@@ -1,12 +1,15 @@
 import express from "express";
 import mongoose from "mongoose";
-import Cards from "./dbCards.js"
+import cards from "./dbCards.js";
+import cors from 'cors'
 //App Config
 const app = express();
-const port =process.env.PORT || 8001;
-const connection_url ="mongodb+srv://jpduker:Jpduker390@cluster0.kr2e0tb.mongodb.net/?retryWrites=true&w=majority"
+const port =process.env.PORT || 8003;
+const connection_url ="mongodb+srv://jpduker:Jpduker@cluster0.kr2e0tb.mongodb.net/?retryWrites=true&w=majority"
 
 //Middlewares
+app.use(express.json())
+app.use(cors())
 
 //DB config
 mongoose.set('strictQuery', false);
@@ -21,10 +24,10 @@ app.get('/',(req,res) => {
     res.status(200).send("Hello MERN stack")
 });
 
-app.post('tinder/cards',(req,res) =>{
+app.post('/tinder/cards',(req,res) =>{
     const dbCard =req.body
  
-    Cards.create(dbCard,(err,data)=>{
+    cards.create(dbCard,(err,data)=>{
         if(err){
             res.status(500).send(err)
         }else{
@@ -33,8 +36,8 @@ app.post('tinder/cards',(req,res) =>{
             
     })
 });
-app.get('tinder/cards',(req,res) =>{ 
-    Cards.find((err,data)=>{
+app.get('/tinder/cards',(req,res) =>{ 
+    cards.find((err,data)=>{
         if(err){
             res.status(500).send(err)
         }else{
