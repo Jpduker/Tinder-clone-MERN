@@ -1,0 +1,144 @@
+[debug] [2023-02-01T12:31:38.956Z] ----------------------------------------------------------------------
+[debug] [2023-02-01T12:31:38.957Z] Command:       /home/jayaprakash/.nvm/versions/node/v18.7.0/bin/node /home/jayaprakash/.nvm/versions/node/v18.7.0/bin/firebase serve
+[debug] [2023-02-01T12:31:38.957Z] CLI Version:   11.22.0
+[debug] [2023-02-01T12:31:38.958Z] Platform:      linux
+[debug] [2023-02-01T12:31:38.958Z] Node Version:  v18.7.0
+[debug] [2023-02-01T12:31:38.958Z] Time:          Wed Feb 01 2023 18:01:38 GMT+0530 (India Standard Time)
+[debug] [2023-02-01T12:31:38.958Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-02-01T12:31:39.039Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-02-01T12:31:39.040Z] > authorizing via signed-in user (jayaprakashnis619@gmail.com)
+[debug] [2023-02-01T12:31:39.040Z] [iam] checking project tinder-clone-7f72b for permissions ["firebase.projects.get"]
+[debug] [2023-02-01T12:31:39.041Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/tinder-clone-7f72b:testIamPermissions [none]
+[debug] [2023-02-01T12:31:39.041Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/tinder-clone-7f72b:testIamPermissions x-goog-quota-user=projects/tinder-clone-7f72b
+[debug] [2023-02-01T12:31:39.041Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/tinder-clone-7f72b:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-02-01T12:31:40.546Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/tinder-clone-7f72b:testIamPermissions 200
+[debug] [2023-02-01T12:31:40.547Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/tinder-clone-7f72b:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-02-01T12:31:40.551Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/tinder-clone-7f72b [none]
+[debug] [2023-02-01T12:31:41.386Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/tinder-clone-7f72b 200
+[debug] [2023-02-01T12:31:41.387Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/tinder-clone-7f72b {"projectId":"tinder-clone-7f72b","projectNumber":"1045834150077","displayName":"tinder-clone","name":"projects/tinder-clone-7f72b","resources":{"hostingSite":"tinder-clone-7f72b","realtimeDatabaseInstance":"tinder-clone-7f72b-default-rtdb"},"state":"ACTIVE","etag":"1_b41b1e0f-5164-4f5e-a96e-7dd38b7bd981"}
+[info] 
+[info] === Serving from '/home/jayaprakash/Tinder-clone-MERN/tinder-backend'...
+[info] 
+[debug] [2023-02-01T12:31:41.399Z] defaultcredentials: writing to file /home/jayaprakash/.config/firebase/jayaprakashnis619_gmail_com_application_default_credentials.json
+[debug] [2023-02-01T12:31:41.402Z] Setting GAC to /home/jayaprakash/.config/firebase/jayaprakashnis619_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /home/jayaprakash/.config/firebase/jayaprakashnis619_gmail_com_application_default_credentials.json"}}
+[debug] [2023-02-01T12:31:41.403Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/tinder-clone-7f72b/adminSdkConfig [none]
+[debug] [2023-02-01T12:31:42.082Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/tinder-clone-7f72b/adminSdkConfig 200
+[debug] [2023-02-01T12:31:42.082Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/tinder-clone-7f72b/adminSdkConfig {"projectId":"tinder-clone-7f72b","databaseURL":"https://tinder-clone-7f72b-default-rtdb.asia-southeast1.firebasedatabase.app","storageBucket":"tinder-clone-7f72b.appspot.com"}
+[info] i  functions: Watching "/home/jayaprakash/Tinder-clone-MERN/tinder-backend/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/home/jayaprakash/Tinder-clone-MERN/tinder-backend/functions\" for Cloud Functions..."}}
+[debug] [2023-02-01T12:31:42.144Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] ⚠  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2023-02-01T12:31:43.006Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "type": "module",
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2023-02-01T12:31:43.006Z] Building nodejs source
+[debug] [2023-02-01T12:31:43.006Z] Failed to find version of module node: reached end of search path /home/jayaprakash/Tinder-clone-MERN/tinder-backend/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "16" doesn't match your global version "18". Using node@18 from host. 
+[debug] [2023-02-01T12:31:43.009Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-02-01T12:31:43.011Z] Found firebase-functions binary at '/home/jayaprakash/Tinder-clone-MERN/tinder-backend/functions/node_modules/.bin/firebase-functions'
+[debug] [2023-02-01T12:31:43.156Z] Serving at port 8820
+
+[debug] [2023-02-01T12:31:43.366Z] Got response from /__/functions.yaml {"endpoints":{},"specVersion":"v1alpha1","requiredAPIs":[]}
+[error] ⬢  functions: Failed to load function definition from source: FetchError: request to http://localhost:8820/__/quitquitquit failed, reason: read ECONNRESET {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FetchError: request to http://localhost:8820/__/quitquitquit failed, reason: read ECONNRESET"}}
+[debug] [2023-02-01T12:35:22.753Z] File /home/jayaprakash/Tinder-clone-MERN/tinder-backend/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /home/jayaprakash/Tinder-clone-MERN/tinder-backend/functions/index.js changed, reloading triggers"}}
+[debug] [2023-02-01T12:35:23.753Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] ⚠  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2023-02-01T12:35:25.002Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "type": "module",
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2023-02-01T12:35:25.002Z] Building nodejs source
+[debug] [2023-02-01T12:35:25.003Z] Failed to find version of module node: reached end of search path /home/jayaprakash/Tinder-clone-MERN/tinder-backend/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "16" doesn't match your global version "18". Using node@18 from host. 
+[debug] [2023-02-01T12:35:25.003Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-02-01T12:35:25.004Z] Found firebase-functions binary at '/home/jayaprakash/Tinder-clone-MERN/tinder-backend/functions/node_modules/.bin/firebase-functions'
+[debug] [2023-02-01T12:35:25.129Z] Serving at port 8555
+
+[debug] [2023-02-01T12:35:25.366Z] Got response from /__/functions.yaml {"endpoints":{},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-02-01T12:35:25.373Z] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: . {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ."}}
+[debug] [2023-02-01T12:35:43.552Z] ----------------------------------------------------------------------
+[debug] [2023-02-01T12:35:43.553Z] Command:       /home/jayaprakash/.nvm/versions/node/v18.7.0/bin/node /home/jayaprakash/.nvm/versions/node/v18.7.0/bin/firebase serve
+[debug] [2023-02-01T12:35:43.554Z] CLI Version:   11.22.0
+[debug] [2023-02-01T12:35:43.554Z] Platform:      linux
+[debug] [2023-02-01T12:35:43.554Z] Node Version:  v18.7.0
+[debug] [2023-02-01T12:35:43.554Z] Time:          Wed Feb 01 2023 18:05:43 GMT+0530 (India Standard Time)
+[debug] [2023-02-01T12:35:43.554Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-02-01T12:35:43.632Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-02-01T12:35:43.633Z] > authorizing via signed-in user (jayaprakashnis619@gmail.com)
+[debug] [2023-02-01T12:35:43.633Z] [iam] checking project tinder-clone-7f72b for permissions ["firebase.projects.get"]
+[debug] [2023-02-01T12:35:43.634Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/tinder-clone-7f72b:testIamPermissions [none]
+[debug] [2023-02-01T12:35:43.634Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/tinder-clone-7f72b:testIamPermissions x-goog-quota-user=projects/tinder-clone-7f72b
+[debug] [2023-02-01T12:35:43.634Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/tinder-clone-7f72b:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-02-01T12:35:45.124Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/tinder-clone-7f72b:testIamPermissions 200
+[debug] [2023-02-01T12:35:45.125Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/tinder-clone-7f72b:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-02-01T12:35:45.129Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/tinder-clone-7f72b [none]
+[debug] [2023-02-01T12:35:46.072Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/tinder-clone-7f72b 200
+[debug] [2023-02-01T12:35:46.073Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/tinder-clone-7f72b {"projectId":"tinder-clone-7f72b","projectNumber":"1045834150077","displayName":"tinder-clone","name":"projects/tinder-clone-7f72b","resources":{"hostingSite":"tinder-clone-7f72b","realtimeDatabaseInstance":"tinder-clone-7f72b-default-rtdb"},"state":"ACTIVE","etag":"1_b41b1e0f-5164-4f5e-a96e-7dd38b7bd981"}
+[info] 
+[info] === Serving from '/home/jayaprakash/Tinder-clone-MERN/tinder-backend'...
+[info] 
+[debug] [2023-02-01T12:35:46.079Z] defaultcredentials: writing to file /home/jayaprakash/.config/firebase/jayaprakashnis619_gmail_com_application_default_credentials.json
+[debug] [2023-02-01T12:35:46.080Z] Setting GAC to /home/jayaprakash/.config/firebase/jayaprakashnis619_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /home/jayaprakash/.config/firebase/jayaprakashnis619_gmail_com_application_default_credentials.json"}}
+[debug] [2023-02-01T12:35:46.081Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/tinder-clone-7f72b/adminSdkConfig [none]
+[debug] [2023-02-01T12:35:46.623Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/tinder-clone-7f72b/adminSdkConfig 200
+[debug] [2023-02-01T12:35:46.623Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/tinder-clone-7f72b/adminSdkConfig {"projectId":"tinder-clone-7f72b","databaseURL":"https://tinder-clone-7f72b-default-rtdb.asia-southeast1.firebasedatabase.app","storageBucket":"tinder-clone-7f72b.appspot.com"}
+[debug] [2023-02-01T12:35:46.687Z] Error: listen EADDRINUSE: address already in use 127.0.0.1:5000
+    at Server.setupListenHandle [as _listen2] (node:net:1432:16)
+    at listenInCluster (node:net:1480:12)
+    at GetAddrInfoReqWrap.doListen [as callback] (node:net:1629:7)
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:113:8)
+[error] 
+[error] Error: An unexpected error has occurred.
+[info] i  functions: Watching "/home/jayaprakash/Tinder-clone-MERN/tinder-backend/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/home/jayaprakash/Tinder-clone-MERN/tinder-backend/functions\" for Cloud Functions..."}}
