@@ -16,7 +16,7 @@
     "react-scripts": "5.0.1",
     "react-tinder-card": "^1.6.2",
     "web-vitals": "^2.1.4",
-    "homepage" :"http://jpduker.github.io/Tinder-clone-MERN/"
+    "homepage" :"https://jpduker.github.io/Tinder-clone-MERN/"
   },
   "scripts": {
     "start": "react-scripts start",
